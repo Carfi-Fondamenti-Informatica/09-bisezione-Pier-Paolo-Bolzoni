@@ -6,19 +6,18 @@ int main() {
 
     double a, b, err;
 
+    do {
         cout << "inserire estremi" << endl;
         cin >> a >> b;
+    }while((a * a * cos(a) + 1) * (b * b * cos(b) + 1) >= 0 );
 
-        while((a*a * cos(a) + 1) * (b*b * cos(b) + 1) >= 0 ){
-        cout << "inserire estremi" << endl;
-        cin >> a >> b;
-        }
 
         do{
             a = (a+b)/2;
             if((a*a * cos(a) + 1) ==0){
                 break;
-            }if((a*a * cos(a) + 1) * (b*b * cos(b) + 1) < 0){
+            }
+            if((a*a * cos(a) + 1) * (b*b * cos(b) + 1) < 0){
                 b=a;
             }
             err = (b-a)/2;
