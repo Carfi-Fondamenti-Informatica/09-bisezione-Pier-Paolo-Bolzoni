@@ -26,7 +26,7 @@ int main() {
 
     }while(err >= 1e-6);
 
-    cout << float (x *10000)/10000.0;
+    cout << int (x *10000)/10000.0;
 
 
     return 0;
