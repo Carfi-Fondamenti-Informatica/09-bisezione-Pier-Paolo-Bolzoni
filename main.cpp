@@ -4,29 +4,29 @@ using namespace std;
 
 int main() {
 
-    double a, b, err;
+    double a, b, err, x;
+
 
     do {
         cout << "inserire estremi" << endl;
         cin >> a >> b;
     }while((a * a * cos(a) + 1) * (b * b * cos(b) + 1) >= 0 );
 
-
-        do{
-            a = (a+b)/2;
-            if((a*a * cos(a) + 1) ==0){
+    do{
+            x = (a+b)/2;
+            if((x * x * cos(x) + 1) == (0)){
                 break;
             }
-            if((a*a * cos(a) + 1) * (b*b * cos(b) + 1) < 0){
-                b=a;
+            if((a * a * cos(a) + 1) * (x * x * cos(x) + 1) < 0){
+                b=x;
+            }else{
+                a=x;
             }
-            err = (b-a)/2;
-            if(err<0){
-                err=-err;
-            }
-        }while(err >= 1*(M_E)-6);
+            err = abs (b-a)/2;
 
-    cout << a << "\n" <<  a*a * cos(a) + 1 << endl;
+    }while(err >= 1e-6);
+
+    cout << float (x *10000)/10000.0;
 
 
     return 0;
