@@ -21,7 +21,7 @@ int main() {
             }if((a*a * cos(a) + 1) * (b*b * cos(b) + 1) < 0){
                 b=a;
             }
-            err = (b-a)/2);
+            err = (b-a)/2;
             if(err<0){
                 err=-err;
             }
